@@ -71,6 +71,10 @@ public class ListGameHelper
 		TypedQuery<ListGame> typedQuery = em.createQuery("select lg from ListGame lg where lg.type =:selectedType", ListGame.class);
 		typedQuery.setParameter("selectedType", typeName);
 		List<ListGame> foundGames = (List<ListGame>) typedQuery.getSingleResult();
+		//The issue is that foundGames is expecting to create an array of ListGames, 
+		//but the method you used told it to only return a single result
+		//Therefore, it tried to convert a single result into a list.  
+		//Instead use: List<ListGame> foundGames = typedQuery.getResultList(); 
 		em.close();
 		return foundGames;
 	}
