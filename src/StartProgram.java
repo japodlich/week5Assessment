@@ -130,7 +130,7 @@ public class StartProgram {
 			List<ListGame> allGames = lgh.showAllGames();
 			for (ListGame singleItem : allGames)
 			{
-				System.out.println(singleItem.returnGameDetails());
+				System.out.println(singleItem.toString());
 			}
 			
 

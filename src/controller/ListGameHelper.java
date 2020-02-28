@@ -13,7 +13,7 @@ import model.ListGame;
 
 public class ListGameHelper 
 {
-	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("week3Assessment");
+	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("GameShoppingLists");
 	
 	public void insertGame(ListGame lg)
 	{

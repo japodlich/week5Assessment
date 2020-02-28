@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Games")
+@Table(name="games")
 
 public class ListGame 
 {
@@ -57,7 +57,7 @@ public class ListGame
 		this.price = price;
 	}
 	
-	public String returnGameDetails()
+	public String toString()
 	{
 		return ("Type of game: " + type + " --- " + "Price of game: " + price);
 	}
